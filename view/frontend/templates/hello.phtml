@@ -1,0 +1,8 @@
+<?php
+/** @var \FME\SampleModule\Block\Hello $block */
+?>
+<?php foreach ($block->getItems() as $item): ?>
+<p>
+<?php echo print_r($item->getData()) ?>
+</p>
+<?php endforeach; ?>

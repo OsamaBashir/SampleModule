@@ -1,0 +1,18 @@
+type Query {
+
+    employees: [employeeData] @resolver( class: "FME\\SampleModule\\Model\\Resolver\\Employee") @doc(description: "Get list of employees for the given employees id.")
+
+}
+
+type employeeData {
+
+    id: Int
+
+    name: String
+
+    designation: String
+
+    description: String
+
+
+}

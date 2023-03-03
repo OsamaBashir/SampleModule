@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!-- <add id="FME_SampleModule::mastering" title="FME Extensions"
+             module="FME_SampleModule" resource="FME_SampleModule::mastering"
+             translate="title" sortOrder="900" action="mastering"/>
+         -->
+        <update id="FME_Extensions::fmeextensions" 
+                title="FME Extensions" 
+                module="Magento_Backend" 
+                sortOrder="110" 
+                resource="FME_Extensions::fmeextensions"/>   
+        
+        <add id="FME_SampleModule::main_menu"
+             title="FME Job Portal" 
+             module="FME_SampleModule" 
+             sortOrder="109" 
+             parent="FME_Extensions::fmeextensions" 
+             resource="FME_SampleModule::main_menu"/>
+
+        <add id="FME_SampleModule::mastering"
+             title="Students" 
+             module="FME_SampleModule" 
+             sortOrder="108" 
+             translate="title"
+             action="mastering"
+             parent="FME_SampleModule::main_menu" 
+             resource="FME_SampleModule::mastering"/>     
+    </menu>
+</config>

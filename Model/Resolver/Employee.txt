@@ -1,0 +1,58 @@
+<?php
+
+declare(strict_types=1);
+
+namespace FME\SampleModule\Model\Resolver;
+
+
+use Magento\Framework\GraphQl\Config\Element\Field;
+
+use Magento\Framework\GraphQl\Query\ResolverInterface;
+
+use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
+
+use FME\SampleModule\Model\ResourceModel\Item\CollectionFactory;
+
+use Magento\Store\Model\StoreManagerInterface;
+
+
+class Employee implements ResolverInterface
+
+{
+
+    protected $storeManager;
+
+    protected $itemCollection;
+
+
+    public function __construct(
+
+        StoreManagerInterface $storeManager,
+
+        CollectionFactory $itemCollection
+
+    ) {
+
+        $this->storeManager = $storeManager;
+
+        $this->itemCollection = $itemCollection;
+
+    }
+
+
+    public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
+
+    {
+
+        $currentStoreId = $this->storeManager->getStore()->getId();
+    
+
+        $collection = $this->itemCollection->create();
+        
+        //echo '<pre>';print_r($collection->getData());exit;
+
+        return $collection->getData();
+
+    }
+
+}
