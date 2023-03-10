@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="mastering_sample_item" resource="default" engine="innodb" comment="Sample Items">
+    <column xsi:type="int" name="id" padding="11" unsigned="false" nullable="false" identity="true" comment="Item ID"/>
+    <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Item Name"/>
+    <column xsi:type="text" name="designation" nullable="false" comment="Designation"/>
+    <column xsi:type="text" name="description" nullable="true" comment="Item Description"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="id"/>
+    </constraint>
+    <index referenceId="MASTERING_SAMPLE_ITEM_NAME" indexType="btree">
+      <column name="name"/>
+    </index>
+  </table>
+    <table name="mastering_applied_jobs" resource="default" engine="innodb" comment="Applied_Jobs">
+    <column xsi:type="int" name="id" padding="11" unsigned="false" nullable="false" identity="true" comment="Applied Job ID"/>
+    <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Posted By"/>
+    <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Applied Job Title"/>
+    <column xsi:type="varchar" name="second_email" nullable="false" length="255" comment="Email of Student"/>
+     <column xsi:type="text" name="gpa" nullable="true" comment="gpa"/>
+     <column xsi:type="text" name="salary" nullable="true" comment="salary"/>
+    <column xsi:type="text" name="date" nullable="true" comment="date"/>
+    <column xsi:type="text" name="description" nullable="true" comment="Description"/>
+    <column xsi:type="text" name="responsibilities" nullable="true" comment="Responsibilities"/>
+   <column xsi:type="text" name="skills" nullable="true" comment="Skills"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="id"/>
+    </constraint>
+  </table>
+</schema>

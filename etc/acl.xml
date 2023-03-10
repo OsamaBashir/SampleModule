@@ -16,6 +16,7 @@
                 <resource id="FME_Extensions::fmeextensions" title="FME Extensions" sortOrder="110">
                         <resource id="FME_SampleModule::main_menu" title="FME Job Portal" sortOrder="109"> 
                          <resource id="FME_SampleModule::mastering" title="Students" translate="title" sortOrder="108"/>
+                         <resource id="FME_SampleModule::jobs" title="Jobs" translate="title" sortOrder="107"/>
                        </resource>                                
                 </resource>                
             </resource>

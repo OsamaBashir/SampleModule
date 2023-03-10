@@ -7,4 +7,10 @@
             <resource ref="anonymous"/>
         </resources>
     </route>
+     <route url="/V1/jobs/" method="POST">
+        <service class="FME\SampleModule\Api\AppliedJobsInterface" method="getAppliedJobsData"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
 </routes>

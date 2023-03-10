@@ -25,6 +25,15 @@
              translate="title"
              action="mastering"
              parent="FME_SampleModule::main_menu" 
-             resource="FME_SampleModule::mastering"/>     
+             resource="FME_SampleModule::mastering"/>
+
+        <add id="FME_SampleModule::jobs"
+             title="Jobs" 
+             module="FME_SampleModule" 
+             sortOrder="107" 
+             translate="title"
+             action="mastering/jobs"
+             parent="FME_SampleModule::main_menu" 
+             resource="FME_SampleModule::jobs"/>            
     </menu>
 </config>

@@ -7,5 +7,13 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                 <item name="mastering_jobs_grid_data_source" xsi:type="string">FME\SampleModule\Model\ResourceModel\Jobs\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
       <preference for="FME\SampleModule\Api\StudentInterface" type="FME\SampleModule\Model\Student"/>
+      <preference for="FME\SampleModule\Api\AppliedJobsInterface" type="FME\SampleModule\Model\AppliedJobs" />
 </config>
